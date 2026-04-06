@@ -1,0 +1,1890 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Orn Clinic — International Business Development Plan 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=Cormorant+Garamond:wght@300;400;500;600&family=DM+Sans:wght@300;400;500;600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<style>
+:root {
+  --navy: #060910;
+  --navy-mid: #0D1220;
+  --navy-card: #111827;
+  --navy-light: #1a2235;
+  --gold: #C9A84C;
+  --gold-light: #F0C060;
+  --gold-pale: #e8d5a0;
+  --gold-dark: #8B6914;
+  --teal: #1A9B8C;
+  --teal-light: #2EC9B7;
+  --white: #F5F5F0;
+  --platinum: #E8E8E0;
+  --grey: #9CA3AF;
+  --grey-dark: #6B7280;
+  --border: rgba(201,168,76,0.18);
+  --glass: rgba(17,24,39,0.85);
+  --grad-gold: linear-gradient(135deg, #F0C060 0%, #C9A84C 50%, #8B6914 100%);
+  --grad-dark: linear-gradient(180deg, #060910 0%, #0D1220 100%);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; font-size: 16px; }
+
+body {
+  background: var(--navy);
+  color: var(--white);
+  font-family: 'DM Sans', sans-serif;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* ── NAV ─────────────────────────────────────────── */
+#nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+  background: rgba(6,9,16,0.92);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border);
+  padding: 0 2rem;
+  height: 58px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.nav-logo {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.05rem; font-weight: 700;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.nav-links {
+  display: flex; gap: 0.2rem; list-style: none;
+  overflow-x: auto; scrollbar-width: none;
+}
+.nav-links::-webkit-scrollbar { display: none; }
+.nav-links a {
+  color: var(--grey); text-decoration: none; font-size: 0.72rem;
+  font-weight: 500; letter-spacing: 0.06em; text-transform: uppercase;
+  padding: 0.35rem 0.6rem; border-radius: 4px;
+  transition: color 0.2s, background 0.2s;
+  white-space: nowrap;
+}
+.nav-links a:hover { color: var(--gold); background: rgba(201,168,76,0.08); }
+
+/* ── HERO ─────────────────────────────────────────── */
+#hero {
+  min-height: 100vh;
+  background: var(--navy);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; overflow: hidden;
+  padding: 80px 2rem 4rem;
+}
+.hero-grain {
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+  opacity: 0.4;
+}
+.hero-glow {
+  position: absolute; width: 700px; height: 700px;
+  border-radius: 50%; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse, rgba(201,168,76,0.07) 0%, transparent 70%);
+  top: 50%; left: 50%; transform: translate(-50%, -50%);
+}
+.hero-glow2 {
+  position: absolute; width: 400px; height: 400px;
+  border-radius: 50%; pointer-events: none; z-index: 0;
+  background: radial-gradient(ellipse, rgba(26,155,140,0.06) 0%, transparent 70%);
+  bottom: 10%; right: 10%;
+}
+.hero-lines {
+  position: absolute; inset: 0; pointer-events: none; z-index: 0; opacity: 0.03;
+  background-image: repeating-linear-gradient(0deg, transparent, transparent 49px, rgba(201,168,76,0.8) 50px);
+}
+.hero-content {
+  position: relative; z-index: 2; text-align: center; max-width: 900px;
+}
+.hero-eyebrow {
+  font-size: 0.72rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--gold); font-weight: 600; margin-bottom: 1.5rem;
+  display: flex; align-items: center; justify-content: center; gap: 1rem;
+}
+.hero-eyebrow::before, .hero-eyebrow::after {
+  content: ''; display: block; height: 1px; width: 60px;
+  background: var(--grad-gold);
+}
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2.8rem, 7vw, 5.5rem);
+  font-weight: 900; line-height: 1.08;
+  margin-bottom: 1.2rem;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  animation: shimmer 4s ease-in-out infinite;
+}
+@keyframes shimmer {
+  0%,100% { filter: brightness(1); }
+  50% { filter: brightness(1.2); }
+}
+.hero-subtitle {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.55rem);
+  color: var(--platinum); font-weight: 300;
+  max-width: 680px; margin: 0 auto 2.5rem; letter-spacing: 0.02em;
+}
+.hero-badges {
+  display: flex; flex-wrap: wrap; gap: 0.6rem; justify-content: center;
+  margin-bottom: 2.8rem;
+}
+.hero-badge {
+  font-size: 0.65rem; letter-spacing: 0.12em; text-transform: uppercase; font-weight: 600;
+  padding: 0.35rem 0.9rem; border-radius: 100px;
+  border: 1px solid var(--border); color: var(--gold-pale);
+  background: rgba(201,168,76,0.06);
+}
+.hero-cta {
+  display: inline-flex; align-items: center; gap: 0.6rem;
+  background: var(--grad-gold); color: #0A0A0A;
+  font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.9rem 2.2rem; border-radius: 100px; text-decoration: none;
+  transition: transform 0.2s, box-shadow 0.2s;
+  box-shadow: 0 0 30px rgba(201,168,76,0.3);
+}
+.hero-cta:hover { transform: translateY(-2px); box-shadow: 0 0 50px rgba(201,168,76,0.5); }
+.hero-year {
+  position: absolute; bottom: 2.5rem; right: 2rem;
+  font-family: 'Bebas Neue', sans-serif; font-size: 7rem;
+  color: rgba(201,168,76,0.04); line-height: 1; pointer-events: none; z-index: 1;
+  letter-spacing: -0.02em;
+}
+
+/* ── SHARED LAYOUT ─────────────────────────────────── */
+section { padding: 100px 2rem; }
+.section-inner { max-width: 1160px; margin: 0 auto; }
+.section-label {
+  font-size: 0.68rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--teal); font-weight: 600; margin-bottom: 0.75rem;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem); font-weight: 700; line-height: 1.15;
+  margin-bottom: 1rem;
+}
+.section-title span { background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.section-desc {
+  color: var(--grey); font-size: 1.05rem; max-width: 620px; margin-bottom: 3.5rem; line-height: 1.75;
+}
+.divider {
+  height: 1px; background: var(--border); margin: 0;
+}
+
+/* ── EXEC SUMMARY ─────────────────────────────────── */
+#summary { background: var(--navy-mid); }
+.stat-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5px;
+  border: 1.5px solid var(--border); border-radius: 16px; overflow: hidden;
+  margin-top: 3rem;
+}
+.stat-card {
+  background: var(--navy-card); padding: 2.5rem 2rem;
+  text-align: center; position: relative;
+  transition: background 0.3s;
+}
+.stat-card:hover { background: var(--navy-light); }
+.stat-card::after {
+  content: ''; position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);
+  width: 40%; height: 2px; background: var(--grad-gold); opacity: 0;
+  transition: opacity 0.3s;
+}
+.stat-card:hover::after { opacity: 1; }
+.stat-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 3.8rem;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 1; margin-bottom: 0.5rem; display: block;
+}
+.stat-label { font-size: 0.75rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--grey); font-weight: 500; }
+.stat-sub { font-size: 0.82rem; color: var(--gold-pale); margin-top: 0.4rem; }
+
+/* ── ABOUT ─────────────────────────────────────────── */
+#about { background: var(--navy); }
+.about-grid {
+  display: grid; grid-template-columns: 1fr 1.4fr; gap: 5rem; align-items: start;
+}
+.about-photo {
+  aspect-ratio: 3/4; border-radius: 12px;
+  background: linear-gradient(145deg, #1a2235 0%, #0d1220 100%);
+  border: 1px solid var(--border);
+  display: flex; flex-direction: column; align-items: center; justify-content: flex-end;
+  padding: 2rem; position: relative; overflow: hidden;
+}
+.about-photo::before {
+  content: '👩‍⚕️';
+  font-size: 8rem; position: absolute; top: 50%; left: 50%;
+  transform: translate(-50%, -60%); opacity: 0.15;
+}
+.about-photo-name {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.3rem; font-weight: 700; text-align: center;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.about-photo-title { font-size: 0.75rem; color: var(--grey); text-align: center; letter-spacing: 0.1em; margin-top: 0.2rem; }
+.about-photo-glow {
+  position: absolute; inset: 0; pointer-events: none;
+  background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.12) 0%, transparent 70%);
+}
+.about-bio { font-size: 1rem; color: var(--grey); line-height: 1.8; margin-bottom: 2rem; }
+.credential-badges { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-bottom: 2rem; }
+.badge {
+  font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 700;
+  padding: 0.4rem 0.9rem; border-radius: 6px;
+  border: 1px solid rgba(201,168,76,0.35); color: var(--gold-pale);
+  background: rgba(201,168,76,0.07);
+}
+.badge.teal {
+  border-color: rgba(26,155,140,0.35); color: var(--teal-light);
+  background: rgba(26,155,140,0.07);
+}
+.services-list {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+}
+.service-item {
+  font-size: 0.82rem; color: var(--platinum); padding: 0.4rem 0;
+  display: flex; align-items: center; gap: 0.5rem;
+}
+.service-item::before { content: '◆'; color: var(--gold); font-size: 0.5rem; flex-shrink: 0; }
+
+/* ── MARKET OPPORTUNITY ────────────────────────────── */
+#market { background: var(--navy-mid); }
+.opp-stats {
+  display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-bottom: 3.5rem;
+}
+.opp-stat {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 2rem; text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.opp-stat:hover { transform: translateY(-4px); border-color: var(--gold); }
+.opp-stat-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 3rem;
+  color: var(--teal-light); display: block; line-height: 1;
+}
+.opp-stat-unit { font-size: 0.75rem; color: var(--grey); letter-spacing: 0.15em; text-transform: uppercase; margin-top: 0.3rem; }
+.table-wrap {
+  border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 2rem;
+}
+table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+thead { background: rgba(201,168,76,0.08); }
+thead th {
+  padding: 1rem 1.2rem; text-align: left; font-size: 0.7rem;
+  letter-spacing: 0.15em; text-transform: uppercase; color: var(--gold); font-weight: 700;
+}
+tbody tr { border-top: 1px solid rgba(255,255,255,0.04); transition: background 0.2s; }
+tbody tr:hover { background: rgba(201,168,76,0.04); }
+tbody td { padding: 1rem 1.2rem; color: var(--platinum); }
+tbody tr.highlight-row { background: rgba(201,168,76,0.07); }
+tbody tr.highlight-row td { color: var(--gold-pale); }
+.highlight-badge {
+  background: var(--grad-gold); color: #0A0A0A; font-size: 0.6rem;
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.2rem 0.5rem; border-radius: 4px; margin-left: 0.5rem;
+}
+
+/* ── TARGET MARKETS ────────────────────────────────── */
+#targets { background: var(--navy); }
+.persona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; }
+.persona-card {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; transition: transform 0.3s, border-color 0.3s;
+}
+.persona-card:hover { transform: translateY(-4px); border-color: var(--gold); }
+.persona-header {
+  padding: 2rem 2rem 1.5rem;
+  background: linear-gradient(135deg, rgba(201,168,76,0.1) 0%, transparent 60%);
+  border-bottom: 1px solid var(--border);
+}
+.persona-flag { font-size: 2.5rem; margin-bottom: 0.8rem; }
+.persona-name {
+  font-family: 'Playfair Display', serif; font-size: 1.5rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.3rem;
+}
+.persona-tagline { font-size: 0.8rem; color: var(--gold); letter-spacing: 0.1em; }
+.persona-body { padding: 1.8rem 2rem; }
+.persona-stat { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px solid rgba(255,255,255,0.04); font-size: 0.85rem; }
+.persona-stat:last-child { border-bottom: none; }
+.persona-stat-label { color: var(--grey); }
+.persona-stat-val { color: var(--platinum); font-weight: 600; text-align: right; max-width: 55%; }
+.persona-pain {
+  margin-top: 1.2rem; padding: 1rem; border-radius: 8px;
+  background: rgba(239,68,68,0.06); border: 1px solid rgba(239,68,68,0.15);
+}
+.persona-pain-title { font-size: 0.68rem; color: #f87171; letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }
+.persona-pain p { font-size: 0.82rem; color: var(--platinum); line-height: 1.6; }
+.persona-opp {
+  margin-top: 0.8rem; padding: 1rem; border-radius: 8px;
+  background: rgba(26,155,140,0.06); border: 1px solid rgba(26,155,140,0.15);
+}
+.persona-opp-title { font-size: 0.68rem; color: var(--teal-light); letter-spacing: 0.15em; text-transform: uppercase; font-weight: 700; margin-bottom: 0.4rem; }
+.persona-opp p { font-size: 0.82rem; color: var(--platinum); line-height: 1.6; }
+
+/* ── MARKETING STRATEGY ──────────────────────────── */
+#marketing { background: var(--navy-mid); }
+.tab-nav {
+  display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border); padding-bottom: 0;
+}
+.tab-btn {
+  background: none; border: none; cursor: pointer;
+  font-family: 'DM Sans', sans-serif; font-size: 0.8rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase;
+  color: var(--grey); padding: 0.8rem 1.2rem;
+  border-bottom: 2px solid transparent; margin-bottom: -1px;
+  transition: color 0.2s, border-color 0.2s;
+}
+.tab-btn:hover { color: var(--gold); }
+.tab-btn.active { color: var(--gold); border-bottom-color: var(--gold); }
+.tab-panel { display: none; animation: fadeIn 0.3s ease; }
+.tab-panel.active { display: block; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.strategy-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem; }
+.strategy-card {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.8rem;
+  transition: border-color 0.2s;
+}
+.strategy-card:hover { border-color: rgba(201,168,76,0.4); }
+.strategy-card-icon { font-size: 1.8rem; margin-bottom: 1rem; }
+.strategy-card h4 {
+  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+  color: var(--gold-pale); margin-bottom: 0.8rem;
+}
+.strategy-card p, .strategy-card li {
+  font-size: 0.85rem; color: var(--grey); line-height: 1.75;
+}
+.strategy-card ul { list-style: none; padding: 0; }
+.strategy-card li { padding: 0.2rem 0; padding-left: 1rem; position: relative; }
+.strategy-card li::before { content: '→'; position: absolute; left: 0; color: var(--gold); font-size: 0.7rem; top: 0.3rem; }
+.budget-pill {
+  display: inline-block; margin-top: 0.8rem;
+  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.3);
+  color: var(--gold); font-size: 0.72rem; font-weight: 700;
+  letter-spacing: 0.1em; text-transform: uppercase; padding: 0.3rem 0.8rem; border-radius: 100px;
+}
+.funnel-steps { display: flex; flex-direction: column; gap: 1rem; }
+.funnel-step {
+  display: flex; gap: 1.5rem; align-items: flex-start;
+  padding: 1.2rem; background: var(--navy-card); border: 1px solid var(--border); border-radius: 10px;
+}
+.funnel-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2rem; line-height: 1;
+  color: var(--gold); flex-shrink: 0; width: 40px;
+}
+.funnel-content h5 { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.3rem; }
+.funnel-content p { font-size: 0.82rem; color: var(--grey); line-height: 1.6; }
+
+/* ── BUDGET CHART ─────────────────────────────────── */
+#budget { background: var(--navy); }
+.chart-two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center; }
+.chart-box { background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px; padding: 2rem; }
+.chart-box canvas { max-height: 320px; }
+.budget-legend { display: flex; flex-direction: column; gap: 1rem; }
+.legend-item { display: flex; align-items: center; gap: 1rem; }
+.legend-dot { width: 12px; height: 12px; border-radius: 3px; flex-shrink: 0; }
+.legend-info { flex: 1; }
+.legend-label { font-size: 0.85rem; font-weight: 600; color: var(--white); }
+.legend-val { font-size: 0.75rem; color: var(--grey); }
+.legend-pct {
+  font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; color: var(--gold);
+}
+
+/* ── REVENUE PROJECTION ───────────────────────────── */
+#projection { background: var(--navy-mid); }
+.proj-chart-wrap { background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px; padding: 2.5rem; margin-bottom: 2.5rem; }
+.proj-chart-wrap canvas { max-height: 360px; }
+.scenario-cards { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.scenario-card {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.8rem; text-align: center;
+  transition: transform 0.3s, border-color 0.3s;
+}
+.scenario-card:hover { transform: translateY(-4px); }
+.scenario-card.highlight { border-color: var(--gold); box-shadow: 0 0 30px rgba(201,168,76,0.1); }
+.scenario-label { font-size: 0.7rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--grey); margin-bottom: 0.8rem; }
+.scenario-total {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.6rem;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 1; margin-bottom: 0.4rem;
+}
+.scenario-cases { font-size: 0.82rem; color: var(--grey); }
+.funnel-table-wrap { border: 1px solid var(--border); border-radius: 12px; overflow: hidden; margin-top: 3rem; }
+.funnel-table-title {
+  padding: 1.2rem 1.5rem; background: rgba(201,168,76,0.06);
+  font-size: 0.72rem; letter-spacing: 0.2em; text-transform: uppercase; color: var(--gold); font-weight: 700;
+}
+
+/* ── PATIENT JOURNEY ──────────────────────────────── */
+#journey { background: var(--navy); }
+.timeline {
+  display: grid; grid-template-columns: repeat(8,1fr); gap: 0; position: relative;
+  margin-top: 3rem;
+}
+.timeline::before {
+  content: ''; position: absolute;
+  top: 38px; left: 6%; right: 6%; height: 2px;
+  background: linear-gradient(90deg, var(--gold-dark), var(--gold), var(--teal), var(--gold-dark));
+  z-index: 0;
+}
+.timeline-item { text-align: center; position: relative; z-index: 1; padding: 0 0.3rem; }
+.timeline-dot {
+  width: 16px; height: 16px; border-radius: 50%;
+  background: var(--navy); border: 2px solid var(--gold);
+  margin: 0 auto 1rem; position: relative;
+  box-shadow: 0 0 12px rgba(201,168,76,0.5);
+}
+.timeline-dot.teal { border-color: var(--teal-light); box-shadow: 0 0 12px rgba(26,155,140,0.5); }
+.timeline-num {
+  position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);
+  font-family: 'Bebas Neue', sans-serif; font-size: 0.55rem; color: var(--gold);
+}
+.timeline-icon { font-size: 1.6rem; margin-bottom: 0.5rem; }
+.timeline-label { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--white); margin-bottom: 0.3rem; }
+.timeline-desc { font-size: 0.65rem; color: var(--grey); line-height: 1.5; }
+.journey-extras { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; margin-top: 3rem; }
+.journey-extra {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 10px;
+  padding: 1.5rem; display: flex; gap: 1rem; align-items: flex-start;
+}
+.journey-extra-icon { font-size: 1.8rem; flex-shrink: 0; }
+.journey-extra h5 { font-size: 0.85rem; font-weight: 700; color: var(--gold-pale); margin-bottom: 0.3rem; }
+.journey-extra p { font-size: 0.78rem; color: var(--grey); line-height: 1.6; }
+
+/* ── OPERATIONAL ──────────────────────────────────── */
+#ops { background: var(--navy-mid); }
+.ops-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 1.5rem; }
+.ops-card {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 12px;
+  padding: 1.8rem; transition: transform 0.3s, border-color 0.3s;
+}
+.ops-card:hover { transform: translateY(-3px); border-color: rgba(201,168,76,0.4); }
+.ops-icon { font-size: 2rem; margin-bottom: 1rem; }
+.ops-num {
+  font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem;
+  color: rgba(201,168,76,0.2); position: absolute; top: 1rem; right: 1.2rem;
+}
+.ops-card { position: relative; }
+.ops-title { font-size: 0.9rem; font-weight: 700; color: var(--white); margin-bottom: 0.5rem; }
+.ops-desc { font-size: 0.8rem; color: var(--grey); line-height: 1.65; }
+
+/* ── PACKAGES ─────────────────────────────────────── */
+#packages { background: var(--navy); overflow: hidden; }
+.packages-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.pkg-card {
+  border-radius: 20px; overflow: hidden; position: relative;
+  transition: transform 0.35s, box-shadow 0.35s;
+  border: 1px solid var(--border);
+}
+.pkg-card:hover { transform: translateY(-8px); }
+.pkg-card.popular { border-color: var(--gold); box-shadow: 0 0 60px rgba(201,168,76,0.15); }
+.pkg-card.vip { border-color: #8B6914; box-shadow: 0 0 40px rgba(139,105,20,0.1); }
+.pkg-header {
+  padding: 2.5rem 2rem 2rem;
+  position: relative; overflow: hidden;
+}
+.pkg-card:nth-child(1) .pkg-header { background: linear-gradient(135deg, #1a2235 0%, #111827 100%); }
+.pkg-card:nth-child(2) .pkg-header { background: linear-gradient(135deg, #2a1f08 0%, #1a1406 100%); }
+.pkg-card:nth-child(3) .pkg-header { background: linear-gradient(135deg, #1f1506 0%, #100d03 100%); }
+.pkg-header-glow {
+  position: absolute; top: -30px; right: -30px; width: 120px; height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(201,168,76,0.25), transparent 70%);
+  pointer-events: none;
+}
+.pkg-tier {
+  font-size: 0.62rem; letter-spacing: 0.25em; text-transform: uppercase; font-weight: 700;
+  color: var(--grey); margin-bottom: 0.6rem;
+}
+.pkg-name {
+  font-family: 'Playfair Display', serif; font-size: 1.4rem; font-weight: 700;
+  color: var(--white); line-height: 1.2; margin-bottom: 0.5rem;
+}
+.pkg-name-sub { font-size: 0.78rem; color: var(--grey); font-family: 'DM Sans',sans-serif; margin-bottom: 1.5rem; }
+.pkg-price-wrap { display: flex; align-items: baseline; gap: 0.3rem; margin-bottom: 0.6rem; }
+.pkg-currency { font-size: 1.2rem; color: var(--gold); font-weight: 700; }
+.pkg-price {
+  font-family: 'Bebas Neue', sans-serif; font-size: 4rem; line-height: 1;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.pkg-target {
+  display: inline-block; font-size: 0.68rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.3rem 0.8rem; border-radius: 100px;
+  background: rgba(201,168,76,0.1); border: 1px solid rgba(201,168,76,0.25); color: var(--gold);
+  font-weight: 600;
+}
+.pkg-popular-badge {
+  position: absolute; top: 1.5rem; right: 1.5rem;
+  background: var(--grad-gold); color: #0A0A0A; font-size: 0.6rem;
+  font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase;
+  padding: 0.3rem 0.7rem; border-radius: 100px;
+}
+.pkg-body { background: var(--navy-card); padding: 2rem; }
+.pkg-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.pkg-features li {
+  font-size: 0.84rem; color: var(--platinum); display: flex; align-items: flex-start; gap: 0.7rem;
+  line-height: 1.5;
+}
+.pkg-features li .chk { color: var(--gold); flex-shrink: 0; font-size: 0.9rem; margin-top: 0.05rem; }
+.pkg-features li .chk.teal { color: var(--teal-light); }
+.pkg-btn {
+  display: block; text-align: center; margin-top: 1.8rem;
+  padding: 0.9rem; border-radius: 10px; font-size: 0.82rem;
+  font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase;
+  text-decoration: none; transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer; border: none;
+}
+.pkg-btn.gold { background: var(--grad-gold); color: #0A0A0A; box-shadow: 0 4px 20px rgba(201,168,76,0.25); }
+.pkg-btn.gold:hover { transform: translateY(-2px); box-shadow: 0 8px 30px rgba(201,168,76,0.4); }
+.pkg-btn.outline { background: transparent; color: var(--gold); border: 1px solid var(--gold); }
+.pkg-btn.outline:hover { background: rgba(201,168,76,0.08); }
+
+/* ── MARKETING TIERS ──────────────────────────────── */
+#tiers { background: var(--navy-mid); }
+.tiers-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2rem; margin-top: 3rem; }
+.tier-card {
+  background: var(--navy-card); border: 1px solid var(--border); border-radius: 16px;
+  overflow: hidden; transition: transform 0.3s, border-color 0.3s;
+}
+.tier-card:hover { transform: translateY(-5px); border-color: rgba(201,168,76,0.4); }
+.tier-card.recommended { border-color: var(--gold); box-shadow: 0 0 40px rgba(201,168,76,0.12); }
+.tier-head {
+  padding: 2rem 2rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+.tier-rec {
+  position: absolute; top: 1.2rem; right: 1.2rem;
+  background: var(--grad-gold); color: #0A0A0A; font-size: 0.58rem;
+  font-weight: 800; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.25rem 0.6rem; border-radius: 100px;
+}
+.tier-name {
+  font-family: 'Playfair Display', serif; font-size: 1.3rem; font-weight: 700;
+  color: var(--white); margin-bottom: 0.3rem;
+}
+.tier-price {
+  font-family: 'Bebas Neue', sans-serif; font-size: 3.2rem;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.tier-price-unit { font-size: 0.75rem; color: var(--grey); letter-spacing: 0.1em; }
+.tier-body { padding: 1.8rem 2rem; }
+.tier-features { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
+.tier-features li {
+  font-size: 0.82rem; color: var(--platinum); display: flex; gap: 0.7rem; align-items: flex-start; line-height: 1.5;
+}
+.tier-features li::before { content: '✓'; color: var(--teal-light); font-weight: 700; flex-shrink: 0; }
+
+/* ── CTA ──────────────────────────────────────────── */
+#cta {
+  background: var(--navy);
+  text-align: center; padding: 120px 2rem;
+  position: relative; overflow: hidden;
+}
+.cta-glow {
+  position: absolute; width: 600px; height: 600px; border-radius: 50%;
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  background: radial-gradient(circle, rgba(201,168,76,0.06) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cta-label {
+  font-size: 0.7rem; letter-spacing: 0.3em; text-transform: uppercase;
+  color: var(--teal); margin-bottom: 1.2rem; font-weight: 600;
+}
+.cta-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 5vw, 4rem); font-weight: 700; line-height: 1.15;
+  margin-bottom: 1.2rem; max-width: 700px; margin-left: auto; margin-right: auto;
+}
+.cta-title span { background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.cta-desc { font-size: 1rem; color: var(--grey); max-width: 540px; margin: 0 auto 3rem; line-height: 1.75; }
+.cta-buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+.cta-btn-primary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: var(--grad-gold); color: #0A0A0A;
+  font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none;
+  box-shadow: 0 0 40px rgba(201,168,76,0.35);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.cta-btn-primary:hover { transform: translateY(-2px); box-shadow: 0 0 60px rgba(201,168,76,0.5); }
+.cta-btn-secondary {
+  display: inline-flex; align-items: center; gap: 0.5rem;
+  background: transparent; color: var(--gold);
+  font-weight: 700; font-size: 0.85rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 1rem 2.5rem; border-radius: 100px; text-decoration: none;
+  border: 1px solid rgba(201,168,76,0.4);
+  transition: background 0.2s;
+}
+.cta-btn-secondary:hover { background: rgba(201,168,76,0.07); }
+.vision-statement {
+  margin-top: 5rem; padding: 3rem; max-width: 750px; margin-left: auto; margin-right: auto;
+  border: 1px solid var(--border); border-radius: 16px;
+  background: rgba(17,24,39,0.5); position: relative; z-index: 1;
+}
+.vision-statement blockquote {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(1.3rem, 2.5vw, 1.8rem); font-style: italic; line-height: 1.55;
+  color: var(--platinum); font-weight: 300;
+}
+.vision-statement blockquote strong {
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  font-weight: 600; font-style: normal;
+}
+.vision-attr {
+  margin-top: 1.5rem; font-size: 0.75rem; letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--grey);
+}
+
+/* ── FOOTER ───────────────────────────────────────── */
+footer {
+  background: #030507; border-top: 1px solid var(--border);
+  padding: 3rem 2rem;
+}
+.footer-inner { max-width: 1160px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: gap; gap: 2rem; }
+.footer-logo {
+  font-family: 'Playfair Display', serif; font-size: 1.1rem; font-weight: 700;
+  background: var(--grad-gold); -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.footer-certs { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+.footer-cert {
+  font-size: 0.62rem; letter-spacing: 0.1em; text-transform: uppercase;
+  padding: 0.25rem 0.6rem; border-radius: 4px;
+  border: 1px solid var(--border); color: var(--grey);
+}
+.footer-copy { font-size: 0.72rem; color: var(--grey-dark); }
+
+/* ── FADE IN ──────────────────────────────────────── */
+.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+.fade-in-delay-1 { transition-delay: 0.1s; }
+.fade-in-delay-2 { transition-delay: 0.2s; }
+.fade-in-delay-3 { transition-delay: 0.3s; }
+.fade-in-delay-4 { transition-delay: 0.4s; }
+
+/* ── RESPONSIVE ───────────────────────────────────── */
+@media (max-width: 900px) {
+  .about-grid, .chart-two-col, .persona-grid, .packages-grid, .tiers-grid, .strategy-grid { grid-template-columns: 1fr; }
+  .opp-stats { grid-template-columns: 1fr 1fr; }
+  .timeline { grid-template-columns: repeat(4,1fr); }
+  .timeline::before { top: 30px; }
+  .ops-grid { grid-template-columns: 1fr 1fr; }
+  .scenario-cards { grid-template-columns: 1fr; }
+  .journey-extras { grid-template-columns: 1fr; }
+}
+@media (max-width: 600px) {
+  section { padding: 70px 1.2rem; }
+  .nav-links { display: none; }
+  .opp-stats { grid-template-columns: 1fr; }
+  .timeline { grid-template-columns: repeat(2,1fr); }
+  .ops-grid { grid-template-columns: 1fr; }
+  .tab-btn { font-size: 0.68rem; padding: 0.6rem 0.7rem; }
+}
+
+/* ── PRINT ────────────────────────────────────────── */
+@media print {
+  #nav { display: none; }
+  section { padding: 40px 1rem; page-break-inside: avoid; }
+  .pkg-card, .tier-card { break-inside: avoid; }
+  body { background: white; color: #111; }
+  .section-title, .hero-title, .pkg-price, .stat-num, .scenario-total {
+    -webkit-text-fill-color: initial !important;
+    background: none !important; color: #8B6914 !important;
+  }
+  .hero-glow, .hero-glow2, .hero-lines, .hero-grain { display: none; }
+  canvas { max-height: 200px !important; }
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-logo">Dr. Orn Clinic · International 2026</div>
+  <ul class="nav-links">
+    <li><a href="#summary">Overview</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#market">Market</a></li>
+    <li><a href="#targets">Targets</a></li>
+    <li><a href="#marketing">Strategy</a></li>
+    <li><a href="#budget">Budget</a></li>
+    <li><a href="#projection">Revenue</a></li>
+    <li><a href="#journey">Journey</a></li>
+    <li><a href="#ops">Operations</a></li>
+    <li><a href="#packages">Packages</a></li>
+    <li><a href="#tiers">Agency Tiers</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-grain"></div>
+  <div class="hero-lines"></div>
+  <div class="hero-glow"></div>
+  <div class="hero-glow2"></div>
+  <div class="hero-content">
+    <div class="hero-eyebrow">Confidential Business Development Plan</div>
+    <h1 class="hero-title">Asia's Premier<br>Hair Restoration Hub</h1>
+    <p class="hero-subtitle">International Patient Acquisition Strategy for Australia & Singapore — Dr. Orn Medical Hair Center, Bangkok 2026</p>
+    <div class="hero-badges">
+      <span class="hero-badge">ABHRS Certified</span>
+      <span class="hero-badge">ISHRS Member</span>
+      <span class="hero-badge">FUE Europe</span>
+      <span class="hero-badge">DOHT Pioneer</span>
+      <span class="hero-badge">14+ Years Excellence</span>
+      <span class="hero-badge">Avg Case Value $9,000</span>
+    </div>
+    <a href="#summary" class="hero-cta">View Strategy ↓</a>
+  </div>
+  <div class="hero-year">2026</div>
+</section>
+
+<!-- EXECUTIVE SUMMARY -->
+<section id="summary">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">Executive Summary</div>
+      <h2 class="section-title">The Opportunity in <span>Numbers</span></h2>
+      <p class="section-desc">Dr. Orn Medical Hair Center is uniquely positioned to capture high-net-worth international patients from Australia and Singapore — two of the world's most underserved, high-spending medical tourism markets — at a fraction of domestic costs.</p>
+    </div>
+    <div class="stat-grid fade-in">
+      <div class="stat-card">
+        <span class="stat-num counter" data-target="14">0</span>
+        <div class="stat-label">Years of Clinical Excellence</div>
+        <div class="stat-sub">Founded Bangkok, 2011</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num counter" data-target="5">0</span>
+        <div class="stat-label">International Certifications</div>
+        <div class="stat-sub">ABHRS · ISHRS · FUE Europe · Chulalongkorn MD</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" style="font-size:2.4rem">$9,000</span>
+        <div class="stat-label">Average International Case Value</div>
+        <div class="stat-sub">USD · 60–75% savings vs AU/SG</div>
+      </div>
+      <div class="stat-card">
+        <span class="stat-num" style="font-size:2.2rem">AU+SG</span>
+        <div class="stat-label">Primary Target Markets</div>
+        <div class="stat-sub">~42M combined addressable population</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ABOUT DR. ORN -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="fade-in">
+        <div class="about-photo">
+          <div class="about-photo-glow"></div>
+          <div>
+            <div class="about-photo-name">Dr. Onuma Phanapiwat</div>
+            <div class="about-photo-title">Founder & Chief Surgeon · Dr. Orn Medical Hair Center</div>
+          </div>
+        </div>
+      </div>
+      <div class="fade-in fade-in-delay-1">
+        <div class="section-label">About Dr. Orn</div>
+        <h2 class="section-title">A Pioneer. <span>A Visionary.</span></h2>
+        <p class="about-bio">Dr. Onuma Phanapiwat — known globally as Dr. Orn — is one of Asia's most distinguished hair restoration surgeons. A graduate of the prestigious Chulalongkorn University School of Medicine, she has dedicated over 14 years to perfecting the art and science of permanent hair restoration. She is the inventor of the DOHT (Direct Optimized Hair Transplantation) method and was the first surgeon in Thailand to pioneer the Long Hair FUE technique, allowing patients to assess natural-looking density and hairline design before even leaving the operating theatre.</p>
+        <p class="about-bio" style="margin-top:1rem;">Every single procedure is personally performed by Dr. Orn — never delegated, never compromised. This philosophy of absolute surgical accountability, combined with her dual-accreditation from both the American Board of Hair Restoration Surgery (ABHRS) and the International Society of Hair Restoration Surgery (ISHRS), places her in the top tier of hair restoration specialists globally.</p>
+        <div class="credential-badges" style="margin-top:1.5rem;">
+          <span class="badge">ABHRS Diplomate</span>
+          <span class="badge">ISHRS Member</span>
+          <span class="badge">FUE Europe</span>
+          <span class="badge">Chulalongkorn MD</span>
+          <span class="badge teal">DOHT Pioneer</span>
+          <span class="badge teal">Long Hair FUE — 1st in Thailand</span>
+          <span class="badge teal">BDMS Wellness Partner</span>
+          <span class="badge">5★ International Reviews</span>
+        </div>
+        <div class="section-label" style="margin-top:2rem;">Full Service Portfolio</div>
+        <div class="services-list">
+          <div class="service-item">FUE Standard & Long Hair FUE</div>
+          <div class="service-item">DOHT (Proprietary Method)</div>
+          <div class="service-item">Beard Transplant</div>
+          <div class="service-item">Eyebrow Transplant</div>
+          <div class="service-item">SVF Hair Cell Treatment</div>
+          <div class="service-item">HRI — Hair Regrowth Injections</div>
+          <div class="service-item">Scalp Micropigmentation</div>
+          <div class="service-item">Anti-Hair Loss Programs</div>
+          <div class="service-item">HBOT Therapy (via BDMS)</div>
+          <div class="service-item">Dr. Orn Cosmez Products</div>
+          <div class="service-item">Dermatological Treatments</div>
+          <div class="service-item">Aesthetic Medicine</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MARKET OPPORTUNITY -->
+<section id="market">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">Market Opportunity</div>
+      <h2 class="section-title">A $38B Industry. <span>Thailand Leads.</span></h2>
+      <p class="section-desc">Global medical tourism is projected to surpass USD $38 billion in 2026. Thailand consistently ranks as the #1 medical tourism destination in Asia. The hair transplant sector alone sees 1.5M+ procedures annually worldwide, with explosive demand from high-income Western markets.</p>
+    </div>
+    <div class="opp-stats fade-in">
+      <div class="opp-stat">
+        <span class="opp-stat-num counter" data-target="38">0</span>
+        <div class="opp-stat-unit">Billion USD — Global Med Tourism Market 2026</div>
+      </div>
+      <div class="opp-stat">
+        <span class="opp-stat-num counter" data-target="1500000" data-suffix="M+">0</span>
+        <div class="opp-stat-unit" style="font-size:0.65rem;">Hair transplants performed worldwide per year</div>
+      </div>
+      <div class="opp-stat">
+        <span class="opp-stat-num counter" data-target="75">0</span>
+        <div class="opp-stat-unit">% Cost Savings vs Australia at Dr. Orn</div>
+      </div>
+    </div>
+    <div class="fade-in">
+      <div class="section-label">Cost Competitiveness Analysis</div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Destination</th>
+              <th>Avg Cost (USD)</th>
+              <th>Quality Rating</th>
+              <th>Flight from Australia</th>
+              <th>Flight from Singapore</th>
+              <th>Value Score</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight-row">
+              <td><strong>Thailand — Dr. Orn</strong> <span class="highlight-badge">BEST VALUE</span></td>
+              <td><strong>$9,000</strong></td>
+              <td>⭐⭐⭐⭐⭐</td>
+              <td>✈️ 9–10 hrs</td>
+              <td>✈️ 2 hrs</td>
+              <td style="color:var(--teal-light);font-weight:700;">Exceptional</td>
+            </tr>
+            <tr>
+              <td>Turkey</td>
+              <td>$3,500</td>
+              <td>⭐⭐⭐</td>
+              <td>✈️ 14–20 hrs</td>
+              <td>✈️ 10 hrs</td>
+              <td style="color:var(--grey);">Budget / Variable</td>
+            </tr>
+            <tr>
+              <td>United Kingdom</td>
+              <td>$18,000</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>✈️ 22 hrs</td>
+              <td>✈️ 13 hrs</td>
+              <td style="color:var(--grey);">High Cost</td>
+            </tr>
+            <tr>
+              <td>Australia (Local)</td>
+              <td>$22,000</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>🏠 Local</td>
+              <td>✈️ 8 hrs</td>
+              <td style="color:var(--grey);">Very Expensive</td>
+            </tr>
+            <tr>
+              <td>Singapore (Local)</td>
+              <td>$28,000</td>
+              <td>⭐⭐⭐⭐</td>
+              <td>✈️ 8 hrs</td>
+              <td>🏠 Local</td>
+              <td style="color:var(--grey);">Most Expensive</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- TARGET MARKETS -->
+<section id="targets">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">Target Markets</div>
+      <h2 class="section-title">Two Markets. <span>One Vision.</span></h2>
+      <p class="section-desc">Australia and Singapore represent the highest-value, highest-intent international patient pools for Dr. Orn. Both markets share identical pain points: astronomical domestic costs, world-class awareness of Thai medical quality, and strong propensity for combining treatment with travel.</p>
+    </div>
+    <div class="persona-grid fade-in">
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-flag">🇦🇺</div>
+          <div class="persona-name">The Aussie Professional</div>
+          <div class="persona-tagline">Primary Market · High Volume · Travel-Ready</div>
+        </div>
+        <div class="persona-body">
+          <div class="persona-stat"><span class="persona-stat-label">Age Range</span><span class="persona-stat-val">32–52 years old</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Key Cities</span><span class="persona-stat-val">Sydney · Melbourne · Brisbane · Perth</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Annual Income</span><span class="persona-stat-val">AUD $120,000–$300,000+</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Hair Transplant Cost AU</span><span class="persona-stat-val">AUD $15,000–$30,000 ($10–20K USD)</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Savings with Dr. Orn</span><span class="persona-stat-val" style="color:var(--teal-light);">Up to 65% less</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Research Channels</span><span class="persona-stat-val">Google, YouTube, Instagram, Reddit</span></div>
+          <div class="persona-pain">
+            <div class="persona-pain-title">⚡ Core Pain Points</div>
+            <p>Local costs are prohibitive. Long waitlists of 3–6 months in capital cities. Uncomfortable disclosing hair loss to local social networks. Limited surgeon specialisation compared to dedicated Thai clinics.</p>
+          </div>
+          <div class="persona-opp">
+            <div class="persona-opp-title">✦ Our Opportunity</div>
+            <p>Australians lead globally in Thai medical tourism adoption. Bangkok is well-connected from all major AU cities. They want to combine surgery with a 5–7 day Bangkok holiday. Strong word-of-mouth culture in social groups aged 35–50.</p>
+          </div>
+        </div>
+      </div>
+      <div class="persona-card">
+        <div class="persona-header">
+          <div class="persona-flag">🇸🇬</div>
+          <div class="persona-name">The Singapore Executive</div>
+          <div class="persona-tagline">Premium Market · Quality-First · 2hr Away</div>
+        </div>
+        <div class="persona-body">
+          <div class="persona-stat"><span class="persona-stat-label">Age Range</span><span class="persona-stat-val">28–48 years old</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Key Demographics</span><span class="persona-stat-val">CBD Professionals · Expat Communities</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Annual Income</span><span class="persona-stat-val">SGD $150,000–$500,000+</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Hair Transplant Cost SG</span><span class="persona-stat-val">SGD $15,000–$40,000 ($11–30K USD)</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Flight to Bangkok</span><span class="persona-stat-val" style="color:var(--teal-light);">✈️ Just 2 hours away</span></div>
+          <div class="persona-stat"><span class="persona-stat-label">Trust Factors</span><span class="persona-stat-val">Certifications · LinkedIn · Clinical Papers</span></div>
+          <div class="persona-pain">
+            <div class="persona-pain-title">⚡ Core Pain Points</div>
+            <p>Singapore's hair transplant market is severely overpriced. Local surgeons have limited specialisation. Executives demand absolute discretion — local treatment risks exposure in tight professional circles. Long recovery requires privacy away from office.</p>
+          </div>
+          <div class="persona-opp">
+            <div class="persona-opp-title">✦ Our Opportunity</div>
+            <p>Bangkok is a weekend trip from Singapore. SGD patients are used to cross-border healthcare and trust Thai medical standards. The premium positioning, private VIP experience, and ABHRS certification of Dr. Orn matches their exacting standards perfectly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MARKETING STRATEGY -->
+<section id="marketing">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">2026 Marketing Strategy</div>
+      <h2 class="section-title">Omnichannel. <span>Data-Driven. Unstoppable.</span></h2>
+      <p class="section-desc">A post-2025 digital landscape demands multi-channel dominance. Our strategy leverages Meta's AI ad targeting, Google's high-intent search capture, TikTok's explosive AU/SG reach, and a precision content engine — all converging into one seamless patient acquisition funnel.</p>
+    </div>
+    <div class="tab-nav fade-in">
+      <button class="tab-btn active" onclick="switchTab('paid')">📱 Paid Ads</button>
+      <button class="tab-btn" onclick="switchTab('social')">📸 Social Media</button>
+      <button class="tab-btn" onclick="switchTab('seo')">🔍 SEO / Content</button>
+      <button class="tab-btn" onclick="switchTab('partners')">🤝 Partnerships</button>
+      <button class="tab-btn" onclick="switchTab('influencers')">⭐ Influencers</button>
+      <button class="tab-btn" onclick="switchTab('email')">📧 Email Funnel</button>
+    </div>
+
+    <!-- TAB: PAID ADS -->
+    <div id="tab-paid" class="tab-panel active">
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-card-icon">📘</div>
+          <h4>Meta Ads — Instagram + Facebook</h4>
+          <ul>
+            <li>Geo-target: Sydney, Melbourne, Brisbane, Perth + Singapore CBD</li>
+            <li>Demographics: Men aged 28–55, high-income interests</li>
+            <li>Interest stacking: Hair loss + Medical tourism + Bangkok travel + Grooming + Movember</li>
+            <li>Ad formats: Before/After carousels, 30s Reels, Story swipe-up lead forms</li>
+            <li>Retargeting: Website visitors (30/60/90 day windows), video viewers (75%+), IG profile visitors</li>
+            <li>Lookalike audiences: Seed from existing patient list (1% + 3% LAL)</li>
+            <li>Post-2025 creative: AI-generated background variations + Dynamic Copy Testing</li>
+          </ul>
+          <span class="budget-pill">Budget: $2,000–$4,000/mo · CPL Target: $15–$40 · Est. 60–120 leads/mo</span>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🔎</div>
+          <h4>Google Ads — Search + YouTube + Display</h4>
+          <ul>
+            <li>Search: "hair transplant Bangkok", "FUE Thailand", "hair transplant cost Australia alternative"</li>
+            <li>PMAX campaigns targeting AU + SG with asset groups per market</li>
+            <li>YouTube pre-roll: 15–30s unskippable on grooming / men's health channels</li>
+            <li>Display remarketing: Anyone who visited drornhaircenter.com</li>
+            <li>Demand Gen: Discovery feed ads targeting high-net-worth AU/SG audiences</li>
+            <li>Landing pages: Separate AU and SG geo-targeted pages with local pricing comparisons</li>
+          </ul>
+          <span class="budget-pill">Budget: $1,500–$3,000/mo · Focus: High purchase-intent keywords</span>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🎵</div>
+          <h4>TikTok Ads — 2026 Priority Channel</h4>
+          <ul>
+            <li>TikTok now commands 45%+ of social video consumption in AU and SG (2026 data)</li>
+            <li>Target: Men 28–42, interests: grooming, men's health, travel, lifestyle</li>
+            <li>Ad formats: In-Feed TopView, Spark Ads (boost organic content), Branded Hashtag</li>
+            <li>Creative: "Day of transplant" POV vlogs, 60-day growth reveals, Dr. Orn explainers</li>
+            <li>UGC-style ads perform 3x better than polished ads on TikTok — leverage patient content</li>
+          </ul>
+          <span class="budget-pill">Budget: $500–$1,000/mo · Fastest growing discovery channel</span>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">📊</div>
+          <h4>Conversion Rate Optimisation</h4>
+          <ul>
+            <li>WhatsApp + LINE click-to-chat buttons on all ads (removes friction for Asian market)</li>
+            <li>Heatmapping + A/B testing on landing pages (Hotjar / Microsoft Clarity)</li>
+            <li>Booking widget with real-time international slot availability (scarcity = urgency)</li>
+            <li>Multi-currency display: AUD, SGD, USD pricing shown simultaneously</li>
+            <li>Live chat + chatbot for after-hours enquiries from AU time zone</li>
+            <li>Trust signals: ABHRS badge, 5-star reviews from Bookimed + Google, patient video wall</li>
+          </ul>
+          <span class="budget-pill">Target: 2.5–4% website conversion rate from paid traffic</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SOCIAL MEDIA -->
+    <div id="tab-social" class="tab-panel">
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-card-icon">📸</div>
+          <h4>Instagram — @drorn_onuma + @dr.ornclinic_medicalhair</h4>
+          <ul>
+            <li><strong>Posting cadence:</strong> 4–5 feed posts/week + daily Stories + 3x Reels/week</li>
+            <li><strong>Pillar 1:</strong> Before/After transformations (highest engagement content)</li>
+            <li><strong>Pillar 2:</strong> Dr. Orn's expertise, certifications, behind-the-scenes OR</li>
+            <li><strong>Pillar 3:</strong> International patient testimonials (specifically AU + SG accents)</li>
+            <li><strong>Pillar 4:</strong> Clinic technology showcase — DOHT, laminar-flow OR, microscope graft prep</li>
+            <li><strong>Pillar 5:</strong> Bangkok luxury lifestyle — aspirational travel content (hotels, dining, Skytrain)</li>
+            <li><strong>Pillar 6:</strong> Education — "What is DOHT?", "FUE vs DOHT", "Hair loss stages explained"</li>
+            <li>Hashtag strategy: #hairtransplantbangkok #FUEthailand #drornhair #medtourismthailand</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">▶️</div>
+          <h4>YouTube Channel Strategy</h4>
+          <ul>
+            <li>Long-form: Full procedure walkthroughs (45–60 min documentary style)</li>
+            <li>Patient journey vlogs: "My Hair Transplant in Bangkok — Australian Patient 2026"</li>
+            <li>SEO titles: "Hair Transplant Bangkok Review | 3000 Grafts DOHT Method"</li>
+            <li>Shorts: 60-second before/after reveals — ideal for discovery algorithm</li>
+            <li>Dr. Orn educational series: "Ask Dr. Orn" Q&A format, monthly</li>
+            <li>Playlist: "Why Bangkok Over Turkey?" — addresses top competitor objection</li>
+          </ul>
+          <span class="budget-pill">Target: 10,000+ AU/SG subscribers within 12 months</span>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">💼</div>
+          <h4>LinkedIn — B2B & Referral Development</h4>
+          <ul>
+            <li>Target audience: Medical tourism facilitators, corporate travel managers, executive health consultants in AU + SG</li>
+            <li>Content: Clinical thought leadership — Dr. Orn authoring articles on DOHT methodology</li>
+            <li>LinkedIn Newsletter: "Hair Restoration in Asia — Clinical Insights" (positioning Dr. Orn as a KOL)</li>
+            <li>Direct outreach: Connect with 50+ medical tourism agencies per month in AU + SG</li>
+            <li>Showcase ABHRS + ISHRS credentials as authority signals for B2B audience</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🎵</div>
+          <h4>TikTok Organic — 2026's Discovery Engine</h4>
+          <ul>
+            <li>3–5 original TikToks per week from inside the clinic</li>
+            <li>Trending audio + genuine transformation content = organic viral potential</li>
+            <li>POV formats: "POV: You flew to Bangkok for a hair transplant" — massive AU/SG engagement</li>
+            <li>Stitch/duet strategy: Respond to "is Thailand safe for surgery?" trending questions</li>
+            <li>Dr. Orn should appear personally on TikTok — doctor credibility drives conversion</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: SEO -->
+    <div id="tab-seo" class="tab-panel">
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🔍</div>
+          <h4>SEO — Target Keywords</h4>
+          <ul>
+            <li>"hair transplant Bangkok Australians" — 2,400 monthly searches AU</li>
+            <li>"hair transplant Thailand vs Australia cost" — high commercial intent</li>
+            <li>"best hair transplant clinic Bangkok 2026" — time-sensitive, high trust</li>
+            <li>"DOHT hair transplant Bangkok" — branded proprietary method</li>
+            <li>"FUE hair transplant Thailand ABHRS" — credentialing keyword</li>
+            <li>"hair transplant medical tourism Singapore Thailand" — SG geo</li>
+            <li>Long-tail: "how to combine Bangkok holiday with hair transplant"</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">📝</div>
+          <h4>Content Marketing — Blog Strategy</h4>
+          <ul>
+            <li>"Why 1,200+ Australians Chose Bangkok for Hair Transplant in 2025" (data-led, viral potential)</li>
+            <li>"Singapore to Bangkok Hair Transplant: The Complete 2026 Guide"</li>
+            <li>"DOHT vs FUE vs DHI: Which Hair Transplant Method is Best?"</li>
+            <li>"Hair Transplant Cost Comparison: Bangkok vs Sydney vs London 2026"</li>
+            <li>"What to Expect: A Week in Bangkok for Hair Restoration"</li>
+            <li>"Why ABHRS Certification Matters When Choosing a Hair Transplant Surgeon"</li>
+          </ul>
+          <span class="budget-pill">4 blog posts/month · Target: 10,000+ organic monthly visits by Month 12</span>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🌐</div>
+          <h4>Website & Technical SEO</h4>
+          <ul>
+            <li>Dedicated AU landing page: /en/australia — local pricing, AUD, AU testimonials</li>
+            <li>Dedicated SG landing page: /en/singapore — SGD pricing, SG patient stories</li>
+            <li>Schema markup: MedicalClinic, Physician, MedicalProcedure (HairTransplant)</li>
+            <li>Google Business Profile: English, AU/SG patient photos, verified ABHRS certification</li>
+            <li>Core Web Vitals optimisation — Google ranks speed above all in 2026</li>
+            <li>FAQ schema: "Is hair transplant safe in Thailand?", "What is DOHT?"</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">⭐</div>
+          <h4>Review & Reputation Management</h4>
+          <ul>
+            <li>Systematic post-treatment review requests via WhatsApp (90-day mark)</li>
+            <li>Target platforms: Bookimed · Google · Medical Departures · WhatClinic · MyMediTravel</li>
+            <li>AU/SG patients to post in English with location tags</li>
+            <li>Video testimonials: 3–5 min professional case studies for YouTube + ads</li>
+            <li>Respond to every review within 24 hours — builds trust and SEO signals</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: PARTNERSHIPS -->
+    <div id="tab-partners" class="tab-panel">
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🏥</div>
+          <h4>Medical Tourism Platforms</h4>
+          <ul>
+            <li><strong>Bookimed:</strong> Upgrade to featured listing — #1 result for Bangkok hair transplant</li>
+            <li><strong>MyMediTravel:</strong> Paid featured profile + patient review campaigns</li>
+            <li><strong>WhatClinic:</strong> Premium listing + verified ABHRS badge display</li>
+            <li><strong>Medical Departures:</strong> Featured provider with AU-specific pricing page</li>
+            <li><strong>PlacidWay:</strong> International patient package listings with direct WhatsApp CTA</li>
+            <li>Combined budget: $500–$1,000/month across all platforms</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">✈️</div>
+          <h4>Travel & Hospitality Partnerships</h4>
+          <ul>
+            <li><strong>Luxury Hotels Bangkok:</strong> Mandarin Oriental, The Peninsula, Four Seasons — co-created "Hair Restoration + Wellness Retreat" packages including recovery suites</li>
+            <li><strong>Thai Airways + Qantas + Singapore Airlines:</strong> Co-marketing agreements for Bangkok medical tourism routes (AU + SG)</li>
+            <li><strong>Bangkok concierge services:</strong> Airport-to-clinic logistics partnerships</li>
+            <li>Package bundles: "Fly → Transplant → Recover → Explore Bangkok" 7-day itineraries</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🤝</div>
+          <h4>Medical Tourism Agencies (AU + SG)</h4>
+          <ul>
+            <li>Identify top 10 medical tourism agencies in Australia (AMTA-listed firms)</li>
+            <li>Referral fee structure: USD $500–$800 per confirmed booked patient</li>
+            <li>Provide agencies with: Brochure deck, patient FAQ, pricing guide, Dr. Orn bio</li>
+            <li>Singapore: Target corporate wellness consultants and executive health programme providers</li>
+            <li>Annual partnership dinners / webinars to maintain active referral pipeline</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">💎</div>
+          <h4>B2B Corporate Wellness Partnerships</h4>
+          <ul>
+            <li>Singapore: Partner with 5–10 HR directors at Fortune 500 companies for executive health benefits programmes</li>
+            <li>Offer corporate rates for employee wellness packages including hair restoration</li>
+            <li>Australia: Partner with private health insurance providers (Medibank, Bupa) for referral listings</li>
+            <li>Fintech partnerships: Medical finance options (Afterpay Medical, CareCredit international) for AU patients</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: INFLUENCERS -->
+    <div id="tab-influencers" class="tab-panel">
+      <div class="strategy-grid">
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🎙️</div>
+          <h4>Micro-Influencer Strategy (AU & SG)</h4>
+          <ul>
+            <li>Target: Australian and Singaporean men in lifestyle, grooming, travel, finance niches</li>
+            <li>Follower range: 50K–500K (micro-influencers have 8–12x better engagement than mega)</li>
+            <li>Campaign model: Sponsored "real patient experience" — fly them to Bangkok, film everything</li>
+            <li>Deliverables: 1 YouTube vlog (30+ min) + 3 Instagram Reels + TikTok series</li>
+            <li>Fee per influencer: USD $2,000–$8,000 + complimentary procedure (DOHT Signature Package)</li>
+            <li>Target: 2–3 influencer campaigns per quarter</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">👩‍⚕️</div>
+          <h4>Doctor-as-Influencer: Dr. Orn KOL Strategy</h4>
+          <ul>
+            <li>Position Dr. Orn as THE definitive Asian authority on hair restoration surgery</li>
+            <li>Podcast appearances: "Bangkok Medical Tourism Podcast", "Men's Health Australia", "The Expat Files (SG)"</li>
+            <li>Monthly Instagram Live: "Ask Dr. Orn" — Q&A with international followers</li>
+            <li>LinkedIn thought leadership: Monthly article on DOHT methodology and clinical outcomes</li>
+            <li>Medical conference presence: ISHRS Annual Conference speaking slots — builds global credibility</li>
+            <li>Feature in: Business Insider Singapore, Men's Health Australia, AFR Weekend</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">🎬</div>
+          <h4>Video Case Study Campaigns</h4>
+          <ul>
+            <li>Commission professional-grade 3–5 min documentary case studies with AU + SG patients</li>
+            <li>Format: Before/during/after — covering their research journey, arrival in Bangkok, the procedure, and 6-month results</li>
+            <li>These run as paid ads on Meta + YouTube and as organic content</li>
+            <li>Each video targets one specific persona: "35-year-old Sydney finance professional"</li>
+            <li>Subtitles in English (AU/SG accent-friendly) — familiarity builds trust</li>
+          </ul>
+        </div>
+        <div class="strategy-card">
+          <div class="strategy-card-icon">📣</div>
+          <h4>PR & Media Outreach</h4>
+          <ul>
+            <li>Press releases to medical tourism publications in AU + SG: "Bangkok Clinic Launches Asia's First DOHT-HBOT Combined Protocol"</li>
+            <li>Pitch to: news.com.au, The Straits Times (SG), Men's Health AU, GQ Australia</li>
+            <li>HARO (Help a Reporter Out) responses on hair loss / medical tourism threads</li>
+            <li>Annual "State of Hair Restoration in Asia" report — positions clinic as thought leader and generates backlinks</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- TAB: EMAIL FUNNEL -->
+    <div id="tab-email" class="tab-panel">
+      <div class="section-label">6-Step Email Nurture Sequence — International Patient Funnel</div>
+      <div class="funnel-steps" style="margin-top:1.5rem;">
+        <div class="funnel-step">
+          <div class="funnel-num">01</div>
+          <div class="funnel-content">
+            <h5>Lead Magnet: "Free Hair Loss Assessment PDF"</h5>
+            <p>Visitor submits photo + details via website or Instagram lead form. Receives instant automated PDF: "Your Personalised Hair Loss Stage Assessment" with Norwood Scale analysis. Captured into CRM with AU/SG geo-tag. This is the entry point — triggered via all paid and organic channels.</p>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-content">
+          <div class="funnel-num">02</div>
+            <h5>Welcome: Dr. Orn's Story + ABHRS Credentials</h5>
+            <p>Sent within 1 hour of opt-in. Warm, personal email from Dr. Orn herself (or written in her voice). Covers: her 14-year journey, the birth of DOHT, ABHRS + ISHRS certification significance, and why she personally performs every single procedure. Establishes trust and medical authority. Subject: "A message from Dr. Orn — your journey starts here."</p>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-num">03</div>
+          <div class="funnel-content">
+            <h5>Social Proof: AU & SG Patient Testimonials</h5>
+            <p>Day 3. Feature 3–4 before/after transformations from Australian and Singaporean patients specifically. Include: their name (or initials), profession, city, number of grafts, recovery timeline, quote. Link to full YouTube case study video. This email speaks directly to the prospect's own identity — they see themselves in the success stories. Subject: "What a Sydney banker said 6 months after his DOHT procedure."</p>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-num">04</div>
+          <div class="funnel-content">
+            <h5>Objection Handling: Safety, Costs, Travel & Recovery</h5>
+            <p>Day 6. Directly and confidently addresses the 5 biggest objections: (1) "Is it really safe in Thailand?" — ABHRS/ISHRS accreditation, laminar-flow OR, BDMS hospital partnership. (2) "What if something goes wrong?" — 24/7 post-op line, 12-month follow-up protocol. (3) "How do I manage travel?" — dedicated coordinator, hotel partnerships, visa-free entry for AU/SG. (4) "What about my job?" — minimal downtime, scab-concealment protocol, back to office in 5 days. (5) "Is the quality lower?" — FUE Europe membership, 5-star international reviews. Subject: "5 reasons patients worry — and why they fly anyway."</p>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-num">05</div>
+          <div class="funnel-content">
+            <h5>Scarcity: "Only 8 International Slots Per Month"</h5>
+            <p>Day 10. Dr. Orn personally performs every procedure — which means capacity is intentionally limited. This email communicates scarcity with authenticity. Current month's availability is shown. A countdown to the next available slot is displayed. Includes a WhatsApp direct link for instant booking enquiry. Subject: "March is almost full — 3 international slots remaining."</p>
+          </div>
+        </div>
+        <div class="funnel-step">
+          <div class="funnel-num">06</div>
+          <div class="funnel-content">
+            <h5>Book Your Consultation: Free 30-Min Video Call with Dr. Orn</h5>
+            <p>Day 14. Final CTA: Book a complimentary 30-minute private video consultation with Dr. Orn. Calendly link with AU + SG time zone options. Positioned as: "This is not a sales call — it's a clinical consultation." Re-emphasises: no obligation, no cost, no pressure. Clinches the relationship between prospect and Dr. Orn personally. Subject: "Your free 30-minute consultation with Dr. Orn — choose your time."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- BUDGET CHART -->
+<section id="budget">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">Channel Investment</div>
+      <h2 class="section-title">Budget <span>Allocation</span></h2>
+      <p class="section-desc">Total recommended monthly marketing investment: USD $5,000–$9,000 across all channels. Budget is front-loaded toward highest-ROI channels — Meta and Google — while building organic assets that compound in value month over month.</p>
+    </div>
+    <div class="chart-two-col fade-in">
+      <div class="chart-box">
+        <canvas id="budgetChart"></canvas>
+      </div>
+      <div class="budget-legend">
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#C9A84C;"></div>
+          <div class="legend-info">
+            <div class="legend-label">Meta Ads (Instagram + Facebook)</div>
+            <div class="legend-val">$1,750–$3,150/month · Highest volume leads · AU + SG geo-targeting</div>
+          </div>
+          <div class="legend-pct">35%</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#1A9B8C;"></div>
+          <div class="legend-info">
+            <div class="legend-label">Google Ads (Search + YouTube)</div>
+            <div class="legend-val">$1,250–$2,250/month · High-intent search capture</div>
+          </div>
+          <div class="legend-pct">25%</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#4A6FA5;"></div>
+          <div class="legend-info">
+            <div class="legend-label">Content Production</div>
+            <div class="legend-val">$750–$1,350/month · Video, reels, carousels, blogs</div>
+          </div>
+          <div class="legend-pct">15%</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#7C6B9E;"></div>
+          <div class="legend-info">
+            <div class="legend-label">Partnerships & Influencers</div>
+            <div class="legend-val">$500–$900/month · Platform listings + KOL relationships</div>
+          </div>
+          <div class="legend-pct">10%</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#E07C3A;"></div>
+          <div class="legend-info">
+            <div class="legend-label">TikTok Ads</div>
+            <div class="legend-val">$500–$900/month · Discovery + younger demographic</div>
+          </div>
+          <div class="legend-pct">10%</div>
+        </div>
+        <div class="legend-item">
+          <div class="legend-dot" style="background:#3AA65E;"></div>
+          <div class="legend-info">
+            <div class="legend-label">Email CRM & Automation</div>
+            <div class="legend-val">$250–$450/month · Nurture + conversion infrastructure</div>
+          </div>
+          <div class="legend-pct">5%</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- REVENUE PROJECTION -->
+<section id="projection">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">Financial Projections</div>
+      <h2 class="section-title">12-Month Revenue <span>Roadmap</span></h2>
+      <p class="section-desc">Starting with 1 confirmed international case in Month 1 and scaling to 20 per month by Month 12, the target scenario projects USD $909,000 in international revenue within the first year — at an average ad spend ROI of 1,500%+ by Q4.</p>
+    </div>
+    <div class="scenario-cards fade-in" style="margin-bottom:2.5rem;">
+      <div class="scenario-card">
+        <div class="scenario-label">Conservative Scenario</div>
+        <div class="scenario-total">$327,000</div>
+        <div class="scenario-cases">36 cases · $9,000 avg · Months 1–12</div>
+      </div>
+      <div class="scenario-card highlight">
+        <div class="scenario-label">⭐ Target Scenario</div>
+        <div class="scenario-total">$909,000</div>
+        <div class="scenario-cases">101 cases · Scaling 1→20/mo · Year 1</div>
+      </div>
+      <div class="scenario-card">
+        <div class="scenario-label">Aggressive Scenario</div>
+        <div class="scenario-total">$1,620,000</div>
+        <div class="scenario-cases">180 cases · With full domination package</div>
+      </div>
+    </div>
+    <div class="proj-chart-wrap fade-in">
+      <canvas id="revenueChart"></canvas>
+    </div>
+    <div class="funnel-table-wrap fade-in">
+      <div class="funnel-table-title">Monthly Conversion Funnel Model — Target Scenario (Month 12)</div>
+      <table>
+        <thead>
+          <tr>
+            <th>Funnel Stage</th>
+            <th>Conservative</th>
+            <th>Target</th>
+            <th>Aggressive</th>
+            <th>Assumption</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Monthly Ad Impressions</td><td>250,000</td><td>500,000</td><td>1,000,000</td><td>AU + SG combined reach</td></tr>
+          <tr><td>Website Clicks (2% CTR)</td><td>5,000</td><td>10,000</td><td>20,000</td><td>Industry standard CTR</td></tr>
+          <tr><td>Qualified Leads</td><td>150</td><td>300</td><td>600</td><td>3% website → lead conversion</td></tr>
+          <tr><td>Video Consultations</td><td>45</td><td>90</td><td>180</td><td>30% lead → consultation rate</td></tr>
+          <tr><td>Booked Patients</td><td>11</td><td>23</td><td>45</td><td>25% consultation → booking</td></tr>
+          <tr class="highlight-row"><td><strong>Monthly Revenue</strong></td><td><strong>$99,000</strong></td><td><strong>$207,000</strong></td><td><strong>$405,000</strong></td><td><strong>@ $9,000 avg case value</strong></td></tr>
+          <tr><td>ROAS (Return on Ad Spend)</td><td>1,100%</td><td>1,500%</td><td>2,000%</td><td>By Month 12 (mature campaigns)</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- PATIENT JOURNEY -->
+<section id="journey">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">The International Patient Experience</div>
+      <h2 class="section-title">From Discovery <span>to Transformation</span></h2>
+      <p class="section-desc">Every touchpoint in the international patient journey is engineered for trust, convenience, and confidence. From the first Instagram ad to a 12-month post-op follow-up, Dr. Orn Clinic delivers an end-to-end white-glove experience that turns patients into lifelong advocates.</p>
+    </div>
+    <div class="timeline fade-in">
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-num">1</div></div>
+        <div class="timeline-icon">📱</div>
+        <div class="timeline-label">Discovery</div>
+        <div class="timeline-desc">Sees Instagram Reel or Google Search ad in AU/SG</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-num">2</div></div>
+        <div class="timeline-icon">🔍</div>
+        <div class="timeline-label">Research</div>
+        <div class="timeline-desc">Reviews website, YouTube, Bookimed reviews</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-num">3</div></div>
+        <div class="timeline-icon">📧</div>
+        <div class="timeline-label">Lead</div>
+        <div class="timeline-desc">Downloads Hair Assessment PDF, enters email funnel</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot"><div class="timeline-num">4</div></div>
+        <div class="timeline-icon">💻</div>
+        <div class="timeline-label">Consultation</div>
+        <div class="timeline-desc">Free 30-min Zoom with Dr. Orn — treatment plan shared in 48hrs</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot teal"><div class="timeline-num">5</div></div>
+        <div class="timeline-icon">✅</div>
+        <div class="timeline-label">Booking</div>
+        <div class="timeline-desc">Secures international slot. Receives full pre-travel kit</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot teal"><div class="timeline-num">6</div></div>
+        <div class="timeline-icon">✈️</div>
+        <div class="timeline-label">Arrival</div>
+        <div class="timeline-desc">Private airport transfer. Coordinator meets at hotel</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot teal"><div class="timeline-num">7</div></div>
+        <div class="timeline-icon">💉</div>
+        <div class="timeline-label">Surgery Day</div>
+        <div class="timeline-desc">DOHT procedure by Dr. Orn personally. HBOT recovery session</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot teal"><div class="timeline-num">8</div></div>
+        <div class="timeline-icon">🌱</div>
+        <div class="timeline-label">12-Month Follow-Up</div>
+        <div class="timeline-desc">Remote check-ins at 30/60/90/180/365 days via WhatsApp + app</div>
+      </div>
+    </div>
+    <div class="journey-extras fade-in">
+      <div class="journey-extra">
+        <div class="journey-extra-icon">🏨</div>
+        <div>
+          <h5>VIP Recovery Package</h5>
+          <p>3–5 nights at a 5-star partner hotel with recovery amenities, room service, and a personal city concierge who arranges dining, spa, and Bangkok experiences during the healing period.</p>
+        </div>
+      </div>
+      <div class="journey-extra">
+        <div class="journey-extra-icon">📱</div>
+        <div>
+          <h5>24/7 Post-Op Support</h5>
+          <p>Every international patient receives a dedicated WhatsApp thread with Dr. Orn's clinical team for any post-op questions, photos, or concerns — day or night, from Bangkok or back home.</p>
+        </div>
+      </div>
+      <div class="journey-extra">
+        <div class="journey-extra-icon">🎓</div>
+        <div>
+          <h5>Patient Advocacy Programme</h5>
+          <p>At the 6-month milestone, satisfied patients are invited to join the Dr. Orn Ambassador Programme — a referral network that earns AUD/SGD $500 per successful referral through personalised referral links.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- OPERATIONAL -->
+<section id="ops">
+  <div class="section-inner">
+    <div class="fade-in">
+      <div class="section-label">Operational Infrastructure</div>
+      <h2 class="section-title">Built for <span>International Excellence</span></h2>
+      <p class="section-desc">International patient acquisition requires more than great surgery — it demands a seamless, confidence-inspiring operational system that works flawlessly across time zones, languages, and logistics. These 9 operational pillars must be in place before the first campaign launches.</p>
+    </div>
+    <div class="ops-grid fade-in">
+      <div class="ops-card">
+        <span class="ops-num">01</span>
+        <div class="ops-icon">💻</div>
+        <div class="ops-title">International Booking System</div>
+        <div class="ops-desc">Online consultation booking via Zoom, WhatsApp, and LINE — with AU and SG time zone calendar availability. Instant confirmation + digital consent forms in English.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">02</span>
+        <div class="ops-icon">📋</div>
+        <div class="ops-title">48-Hour Treatment Plan</div>
+        <div class="ops-desc">Following initial consultation, every patient receives a personalised, physician-signed digital treatment plan within 48 hours — including graft count estimate, technique recommendation, and step-by-step itinerary.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">03</span>
+        <div class="ops-icon">🙋</div>
+        <div class="ops-title">Dedicated International Coordinator</div>
+        <div class="ops-desc">A fluent English-speaking International Patient Coordinator (IPC) manages all pre-trip logistics — flight guidance, visa information, hotel booking, airport pickup coordination, and day-of-surgery schedule management.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">04</span>
+        <div class="ops-icon">🚐</div>
+        <div class="ops-title">Airport & Concierge Transfers</div>
+        <div class="ops-desc">Private business sedan pickup from Suvarnabhumi or Don Mueang airports. Escorted to hotel and clinic. Return airport drop-off included. Complimentary Bangkok city orientation provided by coordinator.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">05</span>
+        <div class="ops-icon">⚡</div>
+        <div class="ops-title">Same-Day Consultation + Surgery Option</div>
+        <div class="ops-desc">For patients with tight schedules, Dr. Orn offers a same-day consultation and procedure option — ideal for Singapore executives who fly in Friday morning and depart Sunday. Maximum efficiency without compromising clinical quality.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">06</span>
+        <div class="ops-icon">🏨</div>
+        <div class="ops-title">Luxury Recovery Partnerships</div>
+        <div class="ops-desc">Exclusive recovery packages at Bangkok's premier hotels — Mandarin Oriental, The Peninsula, and Four Seasons. Room service recovery menus, scalp-care amenity kits, and 24/7 concierge for patient comfort post-surgery.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">07</span>
+        <div class="ops-icon">📅</div>
+        <div class="ops-title">12-Month Remote Follow-Up Protocol</div>
+        <div class="ops-desc">Structured post-op check-ins at 30, 60, 90, 180, and 365 days via the Dr. Orn patient app and WhatsApp. Photo-based progress assessments reviewed by Dr. Orn personally. Any concerns escalated within 4 hours.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">08</span>
+        <div class="ops-icon">🆘</div>
+        <div class="ops-title">24/7 Emergency Post-Op Line</div>
+        <div class="ops-desc">Dedicated emergency WhatsApp line staffed by Dr. Orn's clinical team around the clock for the first 14 days post-procedure. Every international patient receives a direct emergency contact number before departure.</div>
+      </div>
+      <div class="ops-card">
+        <span class="ops-num">09</span>
+        <div class="ops-icon">🛡️</div>
+        <div class="ops-title">Travel Insurance & Risk Guidance</div>
+        <div class="ops-desc">The IPC provides recommended travel insurance providers covering medical procedures in Thailand (key for AU/SG markets). Partnership with Allianz Global and AXA for seamless claim processing. Full medical documentation provided for insurance purposes.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- MARKETING AGENCY TIERS -->
+<section id="tiers">
+  <div class="section-inner">
+    <div class="fade-in" style="text-align:center;">
+      <div class="section-label">Agency Partnership</div>
+      <h2 class="section-title" style="text-align:center;">Marketing <span>Service Tiers</span></h2>
+      <p class="section-desc" style="max-width:600px; margin-left:auto;margin-right:auto;text-align:center;">Our agency packages are designed to scale with Dr. Orn Clinic's international ambitions. From a focused launch to full-market domination, each tier delivers measurable results and dedicated strategic support.</p>
+    </div>
+    <div class="tiers-grid fade-in">
+      <!-- Starter -->
+      <div class="tier-card">
+        <div class="tier-head">
+          <div class="tier-name">Starter</div>
+          <div class="tier-price">1,500</div>
+          <div class="tier-price-unit">USD / month</div>
+        </div>
+        <div class="tier-body">
+          <ul class="tier-features">
+            <li>Meta Ads management (AU + SG targeting) — up to $3,000 ad spend</li>
+            <li>Monthly content calendar: 12 posts + 4 Reels scripted and captioned</li>
+            <li>1 dedicated lead capture landing page (AU or SG)</li>
+            <li>Email nurture sequence: 3-email welcome series</li>
+            <li>Monthly performance report with KPI dashboard</li>
+            <li>Monthly strategy call (60 minutes)</li>
+            <li>Best for: Testing the market, establishing initial international pipeline</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Growth — Recommended -->
+      <div class="tier-card recommended">
+        <div class="tier-head">
+          <div class="tier-rec">⭐ Recommended</div>
+          <div class="tier-name">Growth</div>
+          <div class="tier-price">3,500</div>
+          <div class="tier-price-unit">USD / month</div>
+        </div>
+        <div class="tier-body">
+          <ul class="tier-features">
+            <li>Meta + Google Ads management — up to $7,000 combined ad spend</li>
+            <li>Full content production: Video Reels (4/month), carousels, Stories, AU/SG-specific posts</li>
+            <li>2 geo-targeted landing pages (AU + SG) with localised copy and pricing</li>
+            <li>Medical tourism platform profile optimisation — 3 platforms (Bookimed, Medical Departures, WhatClinic)</li>
+            <li>Full 6-email nurture sequence setup + CRM integration (HubSpot/Pipedrive)</li>
+            <li>1–2 micro-influencer partnership managed per month</li>
+            <li>Lead tracking dashboard with real-time funnel visibility</li>
+            <li>Bi-weekly strategy calls + WhatsApp account manager access</li>
+            <li>Monthly competitor intelligence report</li>
+            <li>Best for: Serious patient acquisition with measurable ROI from Month 3</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Full Domination -->
+      <div class="tier-card">
+        <div class="tier-head">
+          <div class="tier-name">Full Domination</div>
+          <div class="tier-price">7,500</div>
+          <div class="tier-price-unit">USD / month</div>
+        </div>
+        <div class="tier-body">
+          <ul class="tier-features">
+            <li>Everything in Growth Package — amplified</li>
+            <li>TikTok Ads campaign management (AU + SG targeting)</li>
+            <li>YouTube channel management + 2 long-form videos/month (edited, SEO-optimised)</li>
+            <li>Full SEO programme + 4 blog posts/month (English, AU/SG-targeted)</li>
+            <li>LinkedIn B2B outreach: 50+ medical tourism agency contacts/month in AU + SG</li>
+            <li>PR + media outreach: AU/SG health publications, medical tourism press</li>
+            <li>Patient Ambassador Programme setup and management</li>
+            <li>Quarterly in-person strategy session in Bangkok with Dr. Orn's team</li>
+            <li>Weekly strategy calls + dedicated account director</li>
+            <li>Custom CRM pipeline automation + lead scoring system</li>
+            <li>Best for: Establishing Dr. Orn as THE Asian hub within 12 months — no compromises</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:2.5rem; padding:2rem; border:1px solid var(--border); border-radius:12px; background:rgba(17,24,39,0.4);" class="fade-in">
+      <div style="font-size:0.72rem; letter-spacing:0.2em; text-transform:uppercase; color:var(--gold); margin-bottom:0.5rem;">Transparent Pricing Note</div>
+      <p style="font-size:0.85rem; color:var(--grey); max-width:600px; margin:0 auto; line-height:1.7;">Agency fees above are management and strategy fees only. Advertising spend (Meta, Google, TikTok budgets) is billed separately and directly to Dr. Orn Clinic's ad accounts for full transparency and control. All performance targets are documented in a monthly SLA.</p>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow"></div>
+  <div style="position:relative; z-index:1;">
+    <div class="cta-label fade-in">Ready to Begin</div>
+    <h2 class="cta-title fade-in">The Asian Hub <span>Starts Now.</span></h2>
+    <p class="cta-desc fade-in">Every month without an international marketing strategy is a month of USD $9,000 cases going to competitors. Dr. Orn's clinical credentials, proprietary DOHT method, and 14 years of excellence deserve a global stage. Let us build it together.</p>
+    <div class="cta-buttons fade-in">
+      <a href="https://drornhaircenter.com/EN/HOME" target="_blank" class="cta-btn-primary">Schedule Strategy Session →</a>
+      <a href="#packages" class="cta-btn-secondary">View Packages ↑</a>
+    </div>
+    <div class="vision-statement fade-in">
+      <blockquote>
+        "Dr. Orn will not simply be a great clinic in Bangkok. She will be <strong>the definitive destination</strong> that every high-net-worth patient in Australia and Singapore thinks of first — the name synonymous with trust, transformation, and artistry in Asian hair restoration. Not one of many options. <strong>The only option.</strong>"
+      </blockquote>
+      <div class="vision-attr">— Vision Statement · Dr. Orn International Development Plan 2026</div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-logo">Dr. Orn Medical Hair Center</div>
+      <div style="font-size:0.78rem; color:var(--grey); margin-top:0.3rem;">Bangkok, Thailand · drornhaircenter.com</div>
+    </div>
+    <div class="footer-certs">
+      <span class="footer-cert">ABHRS Diplomate</span>
+      <span class="footer-cert">ISHRS Member</span>
+      <span class="footer-cert">FUE Europe</span>
+      <span class="footer-cert">DOHT Pioneer</span>
+      <span class="footer-cert">Chulalongkorn MD</span>
+      <span class="footer-cert">BDMS Wellness Partner</span>
+    </div>
+    <div class="footer-copy">Confidential Business Development Document · 2026 · For Client Use Only</div>
+  </div>
+</footer>
+
+<script>
+// ── TABS ──────────────────────────────────────────────
+function switchTab(id) {
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// ── INTERSECTION OBSERVER (FADE IN) ───────────────────
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+}, { threshold: 0.1 });
+document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
+
+// ── COUNTER ANIMATION ──────────────────────────────────
+function animateCounter(el) {
+  const target = parseInt(el.dataset.target);
+  const suffix = el.dataset.suffix || '';
+  const duration = 1800;
+  let start = null;
+  const step = (ts) => {
+    if (!start) start = ts;
+    const progress = Math.min((ts - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - progress, 3);
+    const val = Math.floor(eased * target);
+    if (target >= 1000000) {
+      el.textContent = (val / 1000000).toFixed(1) + 'M+';
+    } else {
+      el.textContent = val.toLocaleString() + suffix;
+    }
+    if (progress < 1) requestAnimationFrame(step);
+  };
+  requestAnimationFrame(step);
+}
+const counterIO = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting && !e.target.dataset.animated) {
+      e.target.dataset.animated = true;
+      animateCounter(e.target);
+    }
+  });
+}, { threshold: 0.5 });
+document.querySelectorAll('.counter').forEach(el => counterIO.observe(el));
+
+// ── BUDGET DOUGHNUT CHART ──────────────────────────────
+window.addEventListener('load', () => {
+  const bCtx = document.getElementById('budgetChart').getContext('2d');
+  new Chart(bCtx, {
+    type: 'doughnut',
+    data: {
+      labels: ['Meta Ads', 'Google Ads', 'Content Production', 'Partnerships & Influencers', 'TikTok Ads', 'Email / CRM'],
+      datasets: [{
+        data: [35, 25, 15, 10, 10, 5],
+        backgroundColor: ['#C9A84C','#1A9B8C','#4A6FA5','#7C6B9E','#E07C3A','#3AA65E'],
+        borderColor: '#0D1220',
+        borderWidth: 3,
+        hoverOffset: 8
+      }]
+    },
+    options: {
+      responsive: true,
+      cutout: '70%',
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: '#111827',
+          titleColor: '#C9A84C',
+          bodyColor: '#E8E8E0',
+          borderColor: 'rgba(201,168,76,0.3)',
+          borderWidth: 1,
+          callbacks: {
+            label: (ctx) => ` ${ctx.label}: ${ctx.parsed}%`
+          }
+        }
+      }
+    }
+  });
+
+  // ── REVENUE PROJECTION LINE CHART ─────────────────────
+  const rCtx = document.getElementById('revenueChart').getContext('2d');
+  const months = ['M1','M2','M3','M4','M5','M6','M7','M8','M9','M10','M11','M12'];
+  const target = [9000,18000,27000,36000,45000,54000,72000,90000,108000,126000,144000,180000];
+  const conservative = [9000,9000,9000,18000,18000,27000,27000,36000,36000,45000,45000,54000];
+  const aggressive = [9000,27000,36000,54000,72000,90000,108000,126000,144000,162000,180000,207000];
+
+  new Chart(rCtx, {
+    type: 'line',
+    data: {
+      labels: months,
+      datasets: [
+        {
+          label: 'Aggressive',
+          data: aggressive,
+          borderColor: '#3AA65E',
+          backgroundColor: 'rgba(58,166,94,0.05)',
+          borderWidth: 2,
+          borderDash: [5,4],
+          pointRadius: 4,
+          pointBackgroundColor: '#3AA65E',
+          tension: 0.4,
+          fill: false
+        },
+        {
+          label: 'Target',
+          data: target,
+          borderColor: '#C9A84C',
+          backgroundColor: 'rgba(201,168,76,0.07)',
+          borderWidth: 3,
+          pointRadius: 5,
+          pointBackgroundColor: '#C9A84C',
+          pointBorderColor: '#0D1220',
+          pointBorderWidth: 2,
+          tension: 0.4,
+          fill: true
+        },
+        {
+          label: 'Conservative',
+          data: conservative,
+          borderColor: '#4A6FA5',
+          backgroundColor: 'rgba(74,111,165,0.05)',
+          borderWidth: 2,
+          borderDash: [3,4],
+          pointRadius: 3,
+          pointBackgroundColor: '#4A6FA5',
+          tension: 0.4,
+          fill: false
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      interaction: { mode: 'index', intersect: false },
+      plugins: {
+        legend: {
+          display: true,
+          position: 'top',
+          labels: { color: '#9CA3AF', font: { size: 11 }, padding: 20, usePointStyle: true }
+        },
+        tooltip: {
+          backgroundColor: '#111827',
+          titleColor: '#C9A84C',
+          bodyColor: '#E8E8E0',
+          borderColor: 'rgba(201,168,76,0.3)',
+          borderWidth: 1,
+          callbacks: {
+            label: (ctx) => ` ${ctx.dataset.label}: $${ctx.parsed.y.toLocaleString()}`
+          }
+        }
+      },
+      scales: {
+        x: {
+          grid: { color: 'rgba(255,255,255,0.04)' },
+          ticks: { color: '#6B7280', font: { size: 11 } }
+        },
+        y: {
+          grid: { color: 'rgba(255,255,255,0.04)' },
+          ticks: {
+            color: '#6B7280', font: { size: 11 },
+            callback: (v) => '$' + (v >= 1000 ? (v/1000)+'K' : v)
+          }
+        }
+      }
+    }
+  });
+});
+</script>
+</body>
+</html>
